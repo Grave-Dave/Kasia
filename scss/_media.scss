@@ -1,0 +1,584 @@
+@media (min-width: 375px) {
+	.section-heading {
+		font-size: 2.5rem;
+		margin-bottom: 2em;
+		&::after {
+			bottom: 30px;
+		}
+	}
+	nav {
+		.nav {
+			&__logo {
+				font-size: 1.5rem;
+				&::after {
+					width: 3px;
+				}
+			}
+			&__items--mobile {
+				top: 95px;
+			}
+		}
+	}
+	.header {
+		&__button {
+			font-size: 1.5rem;
+		}
+		&__question-box {
+			height: 350px;
+			font-size: 1.4rem;
+		}
+		&__main-question {
+			font-size: 1.5rem;
+		}
+	}
+
+	.offer {
+		.wrapper {
+			.fa-circle-question {
+				font-size: 1.4rem;
+				top: -5%;
+				left: -5%;
+			}
+		}
+		&__list {
+			font-size: 1rem;
+		}
+		&__list-item {
+			margin-bottom: 10em;
+		}
+		&__list-hide {
+			font-size: 1.2rem;
+		}
+	}
+
+	.contact {
+		&__phone {
+			.contact__heading {
+				font-size: 1.8rem;
+			}
+			.contact__text {
+				font-size: 2.2rem;
+			}
+		}
+		&__address {
+			.contact__heading {
+				font-size: 2rem;
+			}
+		}
+		&__address-box {
+			.contact__text {
+				margin-bottom: 2em;
+				font-size: 1.7rem;
+			}
+		}
+	}
+}
+// ------------------------------------------------------
+
+@media (min-width: 576px) {
+	.section-heading {
+		font-size: 3.5rem;
+		margin-bottom: 1em;
+		&::after {
+			bottom: 43px;
+		}
+	}
+	nav {
+		.nav {
+			&__logo {
+				font-size: 1.8rem;
+				&::after {
+					width: 4px;
+				}
+			}
+			&__items--mobile {
+				top: 105px;
+			}
+		}
+	}
+	.about-me {
+		.wrapper {
+			height: 1500px;
+			.file-mockup1 {
+				top: 5px;
+				right: -10px;
+			}
+		}
+		.wrapper-top {
+			margin-top: 2em;
+		}
+
+		&__photo {
+			min-width: 250px;
+
+			i {
+				display: block;
+			}
+		}
+		&__box {
+			i {
+				display: block;
+			}
+		}
+		&__list {
+			margin-top: 2em;
+			font-size: 1.3rem;
+			text-align: left;
+			clip-path: polygon(85% 0, 100% 15%, 100% 100%, 0 100%, 0 0);
+
+			&::after {
+				top: -25%;
+				right: -25%;
+			}
+		}
+		&__card {
+			.card-img {
+				width: 250px;
+			}
+			.card-text {
+				font-size: 1.2rem;
+
+				h3 {
+					font-size: 1.2rem;
+				}
+			}
+		}
+		&__card--one {
+			bottom: -30px;
+			left: -185px;
+		}
+		&__card--two {
+			bottom: 25px;
+			right: -280px;
+		}
+		&__card--hover {
+			display: block;
+		}
+	}
+	.offer {
+		.wrapper {
+			.fa-circle-question {
+				font-size: 1.6rem;
+				top: -2%;
+				left: 0%;
+			}
+		}
+		&__list {
+			font-size: 1.2rem;
+		}
+		&__list-item {
+			margin-bottom: 8em;
+		}
+		&__list-hide {
+			font-size: 1.4rem;
+		}
+	}
+
+	.contact {
+		&__phone {
+			margin-bottom: 3em;
+			.contact__heading {
+				padding: 1.5em;
+				font-size: 2rem;
+			}
+			.contact__text {
+				font-size: 2.6rem;
+				i {
+					font-size: 4.5rem;
+				}
+			}
+		}
+		&__address {
+			.fa-signs-post {
+				font-size: 10rem;
+			}
+		}
+		&__address-box {
+			.contact__text {
+				margin-bottom: 2.5em;
+				font-size: 2rem;
+			}
+		}
+	}
+}
+// ------------------------------------------------------
+
+@media (min-width: 768px) {
+	.header {
+		&__icons-box-button {
+			padding: 2em 3em 2em 1em;
+			i {
+				font-size: 3.5rem;
+			}
+		}
+		&__icons-box {
+			&-exit {
+				left: 10%;
+			}
+		}
+		&__maps-btn,
+		&__phone-btn {
+			font-size: 3rem;
+		}
+		&__maps-popup,
+		&__phone-popup {
+			font-size: 1.5rem;
+		}
+		&__maps-popup {
+			top: -45%;
+		}
+		&__phone-popup {
+			.phone {
+				font-size: 1.8rem;
+			}
+		}
+
+		&__question-box {
+			font-size: 1.5rem;
+			text-align: left;
+		}
+		&__main-question {
+			font-size: 1.8rem;
+		}
+	}
+	.about-me {
+		.wrapper {
+			height: 1600px;
+			margin-top: 3em;
+		}
+		.wrapper-top {
+			padding: 1em;
+			margin-top: 5em;
+		}
+
+		&__list {
+			font-size: 1.5rem;
+			text-align: left;
+		}
+		&__card {
+			.card-img {
+				width: 300px;
+			}
+			.card-text {
+				font-size: 1.3rem;
+
+				h3 {
+					font-size: 1.4rem;
+				}
+			}
+		}
+	}
+	.offer {
+		.wrapper {
+			.fa-circle-question {
+				font-size: 2rem;
+				top: 0;
+			}
+		}
+		&__list {
+			font-size: 1.6rem;
+		}
+		&__list-item {
+			margin-bottom: 5em;
+		}
+		&__list-hide {
+			font-size: 1.5rem;
+		}
+	}
+	.contact {
+		&__phone {
+			margin-bottom: 2em;
+			.contact__heading {
+				padding: 2em;
+				font-size: 2.2rem;
+			}
+			.contact__text {
+				flex-direction: row;
+				font-size: 2.8rem;
+				i {
+					font-size: 5rem;
+					margin-right: 0.5em;
+					margin-bottom: 0;
+				}
+			}
+		}
+		&__address {
+			.contact__heading {
+				font-size: 2.5rem;
+			}
+		}
+		&__address-box {
+			flex-wrap: nowrap;
+			.contact__text {
+				margin-bottom: 0;
+				font-size: 2rem;
+				min-height: 115px;
+			}
+			.contact__text:nth-child(1) {
+				order: 2;
+			}
+			.contact__text:nth-child(2) {
+				order: 1;
+			}
+			.contact__text:nth-child(3) {
+				order: 3;
+			}
+		}
+	}
+}
+// ------------------------------------------------------
+
+@media (min-width: 992px) {
+	nav {
+		.nav {
+			&__logo {
+				font-size: 2rem;
+				&--down {
+					font-size: 3rem;
+				}
+			}
+			&__menu {
+				.hamburger {
+					display: none;
+				}
+			}
+			&__items {
+				display: flex;
+				font-size: 1.5rem;
+			}
+			&__items--mobile {
+				display: none;
+			}
+		}
+		.nav-scroll {
+			height: 50px;
+			.nav {
+				&__logo {
+					height: 50px;
+					width: 300px;
+					flex-wrap: wrap;
+					align-items: flex-start;
+					justify-content: center;
+					font-size: 1.2rem;
+					&--up,
+					&--middle {
+						margin-right: 0.5em;
+					}
+					&--down {
+						font-size: 2.5rem;
+					}
+					&::after {
+						height: 80%;
+						top: 10%;
+					}
+				}
+			}
+		}
+	}
+	.header {
+		&__icons-box {
+			&-exit {
+				left: 20%;
+			}
+		}
+
+		&__maps-btn,
+		&__phone-btn {
+			font-size: 4rem;
+		}
+		&__maps-popup,
+		&__phone-popup {
+			font-size: 1.6rem;
+		}
+		&__maps-popup {
+			top: -30%;
+		}
+		&__phone-popup {
+			.phone {
+				width: 200px;
+				font-size: 1.8rem;
+			}
+		}
+		&__button {
+			font-size: 1.6rem;
+			top: 87%;
+		}
+		&__question-box {
+			top: 20%;
+			font-size: 1.6rem;
+		}
+		&__main-question {
+			font-size: 2rem;
+			bottom: 17%;
+		}
+	}
+	.about-me {
+		.wrapper {
+			height: 1100px;
+			.file-mockup2 {
+				display: block;
+			}
+			.file-mockup3 {
+				display: block;
+			}
+		}
+		.wrapper-top {
+			flex-wrap: nowrap;
+			height: 500px;
+		}
+
+		&__photo {
+			order: 2;
+
+			&-name-box {
+				display: block;
+			}
+		}
+		&__box {
+			order: 1;
+		}
+		&__list {
+			font-size: 1.4rem;
+			margin-right: 1.5em;
+		}
+		&__card {
+			.card-img {
+				width: 400px;
+			}
+		}
+	}
+	.offer {
+		&__list {
+			font-size: 1.8rem;
+		}
+		&__list-item {
+			margin-bottom: 5em;
+		}
+		&__list-hide {
+			font-size: 1.6rem;
+		}
+	}
+}
+// ------------------------------------------------------
+
+@media (min-width: 1200px) {
+	nav {
+		.nav {
+			&__items {
+				font-size: 1.8rem;
+			}
+		}
+	}
+	.about-me {
+		&__list {
+			font-size: 1.5rem;
+		}
+		&__photo {
+			&-name-box {
+				bottom: -32%;
+				font-size: 2.5rem;
+			}
+			&-name:last-child {
+				display: block;
+			}
+		}
+		&__card {
+			.card-img {
+				width: 500px;
+			}
+			.card-text {
+				font-size: 1.4rem;
+
+				h3 {
+					font-size: 1.5rem;
+				}
+			}
+		}
+	}
+}
+
+// ------------------------------------------------------
+
+@media (min-width: 1400px) {
+	.about-me {
+		&__card {
+			.card-img {
+				width: 600px;
+			}
+		}
+	}
+}
+
+// ------------------------------------------------------
+
+@media (max-width: 570px) and (orientation: landscape) {
+	.header {
+		&__maps-popup,
+		&__phone-popup {
+			flex-wrap: nowrap;
+		}
+		&__maps-popup {
+			top: 10%;
+			right: 100%;
+			gap: 2em;
+			.address {
+				width: 75px;
+			}
+		}
+		&__question-box {
+			height: 100px;
+			font-size: 1.4rem;
+		}
+		&__main-question {
+			font-size: 1.2rem;
+		}
+	}
+}
+@media (min-width: 570px) and (orientation: landscape) {
+	.header {
+		&__maps-popup,
+		&__phone-popup {
+			flex-wrap: nowrap;
+		}
+		&__maps-popup {
+			top: 10%;
+			right: 100%;
+			gap: 2em;
+			.address {
+				width: 145px;
+			}
+		}
+		&__question-box {
+			height: 150px;
+		}
+		&__main-question {
+			font-size: 1.4rem;
+		}
+	}
+}
+@media (min-width: 930px) and (orientation: landscape) {
+	.header {
+		&__maps-popup,
+		&__phone-popup {
+			flex-wrap: wrap;
+		}
+		&__maps-popup {
+			top: -30%;
+			right: 110%;
+			gap: 2em;
+			.address {
+				width: 150px;
+			}
+		}
+		&__question-box {
+			width: 75%;
+			height: 400px;
+			flex-wrap: nowrap;
+			font-size: 1.6rem;
+		}
+
+		&__main-question {
+			font-size: 2rem;
+		}
+	}
+}
