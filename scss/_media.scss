@@ -15,7 +15,7 @@
 				}
 			}
 			&__items--mobile {
-				top: 95px;
+				top: 92px;
 			}
 		}
 	}
@@ -205,6 +205,10 @@
 
 @media (min-width: 768px) {
 	.header {
+		&__title {
+			top: 20%;
+			font-size: 3rem;
+		}
 		&__icons-box-button {
 			padding: 2em 3em 2em 1em;
 			i {
@@ -330,6 +334,10 @@
 
 @media (min-width: 992px) {
 	nav {
+		.wrapper {
+			height: 125px;
+			transition: height 0.3s;
+		}
 		.nav {
 			&__logo {
 				font-size: 2rem;
@@ -376,6 +384,10 @@
 		}
 	}
 	.header {
+		&__title {
+			top: 28%;
+			font-size: 4rem;
+		}
 		&__icons-box {
 			&-exit {
 				left: 20%;

@@ -31,11 +31,14 @@ body {
 .darker {
 	background-color: rgba(0, 0, 0, 0.7) !important;
 }
+.nav-active{
+	color: c.$brown-color !important;
+}
 
 nav {
 	position: absolute;
 	width: 100%;
-	background-color: rgba(0, 0, 0, 0.3);
+	background-color: rgba(0, 0, 0, 0.5);
 	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 	transition: background-color 0.5s;
 	z-index: 100;
@@ -51,6 +54,7 @@ nav {
 			flex-direction: column;
 			padding: 0.5em;
 			font-size: 1.2rem;
+			
 			&--up,
 			&--middle {
 				text-transform: uppercase;
@@ -68,6 +72,7 @@ nav {
 				left: -10px;
 				background-color: c.$brown-color;
 				box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+				transition: .3s;
 			}
 		}
 		&__menu {
@@ -152,7 +157,7 @@ nav {
 }
 
 .nav-scroll {
-	height: 50px;
+	height: 50px !important;
 	.nav {
 		&__logo {
 			font-size: 1rem;
@@ -197,6 +202,18 @@ nav {
 }
 
 .header {
+	&__title {
+		position: absolute;
+		top: 20%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 2;
+		text-transform: uppercase;
+		text-align: center;
+		letter-spacing: 5px;
+		font-size: 2rem;
+		color: c.$white-color;
+	}
 	&__img {
 		width: 100%;
 		height: 100vh;
@@ -387,8 +404,8 @@ nav {
 		position: absolute;
 		top: 82%;
 		left: 50%;
-
 		text-transform: uppercase;
+		font-family: 'Montserrat', sans-serif;
 		font-weight: 700;
 		font-size: 1.2rem;
 		border-radius: 25px;
@@ -429,7 +446,7 @@ nav {
 		text-align: center;
 		font-size: 1.2rem;
 		z-index: 1;
-		font-family: 'Kalam', cursive;
+		// font-family: 'Kalam', cursive;
 		overflow: hidden;
 	}
 
@@ -443,6 +460,7 @@ nav {
 		background-color: rgba(0, 0, 0, 0.4);
 		border-radius: 15px;
 		text-align: center;
+		letter-spacing: 2px;
 	}
 }
 
@@ -609,7 +627,7 @@ nav {
 			right: -20%;
 			width: 40%;
 			height: 40%;
-			background-color: #2889ad;
+			background-color: #6fa3b7;
 			border-radius: 30px;
 			box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
 		}
@@ -703,6 +721,10 @@ nav {
 }
 .show-offer-items {
 	transform: translateY(0) !important;
+}
+.show-offer-header{
+	opacity: 1 !important;
+	transform: scale(1) !important;
 }
 
 .offer {
@@ -835,6 +857,11 @@ nav {
 			transition: transform 0.8s;
 		}
 	}
+	&__header{
+		opacity: 0;
+		transform: scale(0);
+		transition: opacity 0.8s, transform 0.8s;
+	}
 }
 
 // -----------------------------------
@@ -888,6 +915,10 @@ nav {
 			i {
 				font-size: 4rem;
 				margin-bottom: 0.5em;
+			}
+			a{
+				text-decoration: none;
+				color: #000;
 			}
 		}
 	}

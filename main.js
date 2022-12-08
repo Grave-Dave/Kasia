@@ -1,5 +1,8 @@
+const sections = document.querySelectorAll('section');
 const navSection = document.querySelector('nav');
+const header = document.querySelector('header');
 const burgerBtn = document.querySelector('.hamburger');
+const navBtns = document.querySelectorAll('.nav-btn');
 const navItemsBtns = document.querySelectorAll('.nav-btn-m');
 const navMobile = document.querySelector('.nav__items--mobile');
 
@@ -17,6 +20,7 @@ const mainQuestion = document.querySelector('.header__display-question');
 
 const cardAnimationSwitch = document.querySelector('.about-me__card--hover');
 
+const offerHeaders = document.querySelectorAll('.offer__header');
 const offerHideBox = document.querySelector('.offer__list-hide');
 const questionBtns = document.querySelectorAll('.fa-circle-question');
 
@@ -92,7 +96,7 @@ const handleNav = () => {
 
 const navScroll = () => {
 	const navWrapper = navSection.childNodes[1];
-	if (window.scrollY > 200) {
+	if (window.scrollY > 10) {
 		navSection.style.position = 'fixed';
 		navWrapper.classList.add('nav-scroll');
 		navMobile.style.top = '50px';
@@ -170,6 +174,21 @@ const restoreCards = () => {
 	cardTwo.classList.remove('card-two-move');
 };
 
+// headers - offer---------------------------------------------------------------
+
+const options3 = {
+	threshold: 1,
+};
+
+const handleOffers = entries => {
+	entries.forEach(entry => {
+		entry.target.classList.toggle('show-offer-header', entry.isIntersecting);
+		if (entry.isIntersecting) offersObserver.unobserve(entry.target)
+	});
+};
+
+const offersObserver = new IntersectionObserver(handleOffers, options3);
+
 // boxes - offer---------------------------------------------------------------
 
 function handleHideBox() {
@@ -188,9 +207,38 @@ function handleHideBox() {
 	liArr.forEach(li => {
 		li.style.transitionDelay = `${i}ms`;
 		i += 200;
-		li.classList.toggle('show-offer-items')
+		li.classList.toggle('show-offer-items');
 	});
 }
+
+// scrolspy--------------------------------------------
+
+const options = {
+	threshold: [0.5],
+};
+
+const handleScrollspy = entries => {
+	entries.forEach(entry => {
+		if (entry.isIntersecting) {
+			const activeNav = document.querySelector(`a[href='#${entry.target.id}']`);
+			navBtns.forEach(btn => btn.classList.remove('nav-active'));
+			activeNav.classList.add('nav-active');
+		}
+	});
+};
+
+const handleScrollspy2 = entries => {
+	entries.forEach(entry => {
+		if (entry.isIntersecting) {
+			const activeNav = document.querySelector(`a[href='#${entry.target.id}']`);
+			navBtns.forEach(btn => btn.classList.remove('nav-active'));
+			activeNav.classList.add('nav-active');
+		}
+	});
+};
+
+const sectionObserver = new IntersectionObserver(handleScrollspy, options);
+const headerObserver = new IntersectionObserver(handleScrollspy2, options);
 
 //google-maps---------------------------------------------------------------
 
@@ -227,6 +275,15 @@ cardAnimationSwitch.addEventListener('mouseenter', moveCards);
 cardAnimationSwitch.addEventListener('mouseleave', restoreCards);
 
 questionBtns.forEach(question => question.addEventListener('click', handleHideBox));
+
+sections.forEach(section => {
+	sectionObserver.observe(section);
+});
+headerObserver.observe(header);
+
+offerHeaders.forEach(header => {
+	offersObserver.observe(header);
+});
 
 document.addEventListener('DOMContentLoaded', main);
 window.addEventListener('scroll', navScroll);
